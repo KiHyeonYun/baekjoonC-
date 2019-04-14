@@ -1,2 +1,2 @@
-# baekjoonC-
+# baekjoonC++
 beaekjonC++ 코드
