@@ -19,16 +19,16 @@ croatiaAlphabet::croatiaAlphabet(){
 		croAlpha[7] = "z=";
 	};
 int croatiaAlphabet::countCroatiaAlpha(string str){
-	int i=0;			//ºñ±³ÇÒ Å©·Î¾ÆÆ¼¾Æ ¹®ÀÚ string À§Ä¡
-	int location;		//Ã£Àº À§Ä¡
-	int count=0;		//Å©·Î¾ÆÆ¼¾Æ ¹®ÀÚ ¼ö
+	int i=0;			//ë¹„êµí•  í¬ë¡œì•„í‹°ì•„ ë¬¸ì string ìœ„ì¹˜
+	int location;		//ì°¾ì€ ìœ„ì¹˜
+
 	while(str.size()!=0){
 		if(str.find(croAlpha[i]) != string::npos){
 			location=str.find(croAlpha[i]);
 			if(i != 2)
-				str.replace(location,2," ");		//Å©·Î¾ÆÆ¼¾Æ ¹®ÀÚ "dz="¸¦ »« ³ª¸ÓÁö¸¦ Ã£¾ÒÀ¸¸é ±× ¹®ÀÚÅ©±â ¸¸Å­ °ø¹éÀ¸·Î ¹Ù²Ş
+				str.replace(location,2," ");		//í¬ë¡œì•„í‹°ì•„ ë¬¸ì "dz="ë¥¼ ëº€ ë‚˜ë¨¸ì§€ë¥¼ ì°¾ì•˜ìœ¼ë©´ ê·¸ ë¬¸ìí¬ê¸° ë§Œí¼ ê³µë°±ìœ¼ë¡œ ë°”ê¿ˆ
 			else
-				str.replace(location,3," ");		//Å©·Î¾ÆÆ¼¾Æ ¹®ÀÚ "dz="¸¦ Ã£¾ÒÀ¸¸é ±× ¹®ÀÚ Å©±â ¸¸Å­ °ø¹éÀ¸·Î ¹Ù²Ş
+				str.replace(location,3," ");		//í¬ë¡œì•„í‹°ì•„ ë¬¸ì "dz="ë¥¼ ì°¾ì•˜ìœ¼ë©´ ê·¸ ë¬¸ì í¬ê¸° ë§Œí¼ ê³µë°±ìœ¼ë¡œ ë°”ê¿ˆ
 		}
 		else{
 			if(i<8)
@@ -37,7 +37,7 @@ int croatiaAlphabet::countCroatiaAlpha(string str){
 				break;
 		}
 	}
-	return str.size();								//replace¸¦ ÅëÇØ Å©·Î¾ÆÆ¼¾Æ ¹®ÀÚµéÀ» °ø¹é(Å©±â=1)À¸·Î ¹Ù²Û strÀÇ size¸¦ return
+	return str.size();								//replaceë¥¼ í†µí•´ í¬ë¡œì•„í‹°ì•„ ë¬¸ìë“¤ì„ ê³µë°±(í¬ê¸°=1)ìœ¼ë¡œ ë°”ê¾¼ strì˜ sizeë¥¼ return
 
 }
 int main(){
