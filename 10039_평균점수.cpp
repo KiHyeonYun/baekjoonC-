@@ -27,11 +27,11 @@ int main()
 {
 	Student* student = new Student[MAX];
 	int temp=0;
-	student[0].setName("¿ø¼·");
-	student[1].setName("¼¼Èñ");
-	student[2].setName("»ó±Ù");
-	student[3].setName("¼ş");
-	student[4].setName("°­¼ö");
+	student[0].setName("ì›ì„­");
+	student[1].setName("ì„¸í¬");
+	student[2].setName("ìƒê·¼");
+	student[3].setName("ìˆ­");
+	student[4].setName("ê°•ìˆ˜");
 
 	int score;
 	for(int i=0; i<MAX; i++){
