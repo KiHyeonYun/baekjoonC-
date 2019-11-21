@@ -1,27 +1,24 @@
 #include<iostream>
 #include<vector>
-
+#include<algorithm>
 using namespace std;
 
-int main(){
-    int n;
-    int divNum=2;
-    vector<int> res;
-    vector<int>::iterator iter;
-    cin>>n;
-    if(n==1)return 0;
+int main()
+{
+    int a;
+    unsigned int n;
+    vector<unsigned int> factor;
+    int input;
     
-    while(n!=1){
-        if(!(n%divNum)){
-                res.push_back(divNum);
-                n/=divNum;
-        }
-        else{
-            divNum++;   
-        }
+    cin>>a;
+    
+    for(int i=0; i<a; i++){
+        cin>>input;
+        factor.push_back(input);
     }
-    for(iter=res.begin(); iter<res.end(); iter++){
-        cout<<*iter<<'\n';
-    }
+    sort(factor.begin(), factor.end());
+    
+    cout<<factor.at(0)*factor.at(a-1);
+
     return 0;
 }
